@@ -17,9 +17,6 @@ except (FileNotFoundError, IndexError) as e:
     print("Verifique se os arquivos de imagem existem e se há um rosto neles.")
     exit()
 
-
-face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
-
 cap = cv2.VideoCapture(0)
 if not cap.isOpened():
     print("Erro: Não foi possível abrir a câmera.")
